@@ -1,0 +1,77 @@
+:root{
+    --red-text: rgb(240, 104, 104);
+    --red-shadow: #F10000;
+    --bg-color: #1c1c1c;
+    --text: 'Roboto Mono', monospace;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('/the-batman.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.clockdate-wrapper{
+    max-width: 800px;
+    width: 100%;
+    padding: 25px;
+    color: var(--red-text);
+    text-shadow: 
+    0 0 10px var(--red-shadow),
+    0 0 20px var(--red-shadow),
+    0 0 40px var(--red-shadow),
+    0 0 80px var(--red-text),
+    0 0 90px var(--red-text);
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--text);
+    border-radius: 10px;
+}
+
+#clock{
+    font-size: 8em;
+}
+
+#clock span{
+    font-size: .5em;
+    position: relative;
+    top:-40px;
+    left: 10px;
+}
+
+#date{
+    font-size: 2em;
+    letter-spacing: .6em;
+}
+
+@media (max-width: 750px){
+    .clockdate-wrapper{
+        max-width: 300px;
+    }
+    #clock {
+        font-size: 3em;
+    }
+    #clock span{
+        font-size: .4em;
+        top: -20px;
+    }
+    #date{
+        font-size: .7em;
+    }
+}
